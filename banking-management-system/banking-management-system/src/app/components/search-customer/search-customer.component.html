@@ -1,0 +1,103 @@
+<!-- <div class="container">
+    <h1 class="text-center">Apply For Loan</h1> -->
+    <app-footer></app-footer>
+
+    <div class="container-fluid page-body-wrapper">
+      <app-sidebar></app-sidebar>
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="container my-custom-container">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+<!-- <form class="d-flex" (submit)="onSearch(searchValue, searchBy)">
+    <input class="form-control me-2" type="search" placeholder="Search..." [(ngModel)]="searchValue" name="searchValue">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="searchBy" id="accountNumber" value="accountNumber" [(ngModel)]="searchBy">
+      <label class="form-check-label" for="accountNumber">Account Number</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="searchBy" id="cell" value="cell" [(ngModel)]="searchBy">
+      <label class="form-check-label" for="cell">Cell</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="searchBy" id="nid" value="nid" [(ngModel)]="searchBy">
+      <label class="form-check-label" for="nid">NID</label>
+    </div>
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form> -->
+
+<div class="d-flex flex-column">
+
+
+  <form class="d-flex justify-content-between">
+
+    <div class="form-group col-md-6 ml-5">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="searchBy" id="accountNumber" value="accountNumber" [(ngModel)]="searchBy">
+        <label class="form-check-label" for="accountNumber">Account Number</label>
+      </div>
+
+
+
+
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="searchBy" id="cell" value="cell" [(ngModel)]="searchBy">
+      <label class="form-check-label" for="cell">Cell</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="searchBy" id="nid" value="nid" [(ngModel)]="searchBy">
+      <label class="form-check-label" for="nid">NID</label>
+    </div>
+
+
+
+    </div>
+
+  </form>
+  <form class="custom-form mb-3" (submit)="onSearch(searchValue, searchBy)">
+    <input class="form-control me-2 search-input" type="search" placeholder="Search..." [(ngModel)]="searchValue" name="searchValue">
+    <button class="btn btn-primary mt-3 center" type="submit">Search</button>
+  </form>
+</div>
+
+
+
+<div *ngIf="!customers">
+    <p>No customer found for the given search criteria</p>
+</div>
+
+<!-- <div *ngIf="customers">
+  <h3>Search Results:</h3>
+  <ul>
+      <li *ngFor="let customer of customers | keyvalue">
+          <strong>Key:</strong> {{ customer.key }}<br>
+          <strong>Value:</strong> {{ customer.value }}<br>
+      </li>
+  </ul>
+</div> -->
+
+<div *ngFor="let customer of customers | keyvalue" class="customer-item">
+  <div class="form-group row">
+  <div class="col-md-5">
+       {{ customer.key }}
+  </div>
+  <div class="col-md-5">
+   {{ customer.value }}
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+

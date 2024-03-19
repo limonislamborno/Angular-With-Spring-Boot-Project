@@ -1,0 +1,54 @@
+<app-footer></app-footer>
+<div class="container-fluid page-body-wrapper">
+  <app-sidebar2></app-sidebar2>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="container my-custom-container">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+
+
+
+<div class="container">
+  <h1 class="text-center">Loan Application List</h1>
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Loan Type</th>
+        <th>Loan Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+        <!-- Add more table headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let loanApplication of loanApplications">
+        <td>{{ loanApplication.accountNumber }}</td>
+        <td>{{ loanApplication.fullName }}</td>
+        <td>{{ loanApplication.email }}</td>
+        <td>{{ loanApplication.loanType }}</td>
+        <td>{{ loanApplication.loanAmount }}</td>
+        <td>{{ loanApplication.status ? 'Approved' : 'Pending' }}</td>
+        <td>
+          <!-- Add Update Status button -->
+          <button (click)="updateStatus(loanApplication.id)" class="btn btn-primary">Update Status</button>
+        </td>
+        <!-- Add more table cells as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,53 @@
+<app-footer></app-footer>
+<form (ngSubmit)="saveDps()" #dpsForm="ngForm">
+  <!-- Account Number -->
+  <div class="form-group">
+    <label for="accountNumber">Account Number</label>
+    <input type="text" class="form-control" id="accountNumber" name="accountNumber" [(ngModel)]="newDps.accountNumber" (ngModelChange)="fetchCustomerDetails(newDps.accountNumber)" required>
+  </div>
+  
+  <!-- Account Name -->
+  <div class="form-group">
+    <label for="accountName">Account Name</label>
+    <input type="text" class="form-control" id="accountName" name="accountName" [(ngModel)]="newDps.accountName" required>
+  </div>
+  
+  <!-- DPS Term -->
+  <div class="form-group">
+    <label for="dpsTerm">DPS Term</label>
+    <input type="number" class="form-control" id="dpsTerm" name="dpsTerm" [(ngModel)]="newDps.dpsTerm" required>
+  </div>
+  
+  <!-- DPS Amount -->
+  <div class="form-group">
+    <label for="dpsAmount">DPS Amount</label>
+    <input type="number" class="form-control" id="dpsAmount" name="dpsAmount" [(ngModel)]="newDps.dpsAmount" required>
+  </div>
+  
+  <!-- Interest Rate -->
+  <div class="form-group">
+    <label for="interestRate">Interest Rate</label>
+    <input type="number" class="form-control" id="interestRate" name="interestRate" [(ngModel)]="newDps.interestRate" required>
+  </div>
+
+  <div class="form-group">
+    <label for="totalInterest">Interest Rate</label>
+    <input type="number" class="form-control" id="totalInterest" name="totalInterest" [(ngModel)]="newDps.totalInterest" required>
+  </div>
+
+  <div class="form-group">
+    <label for="totalAmount">Total Amount</label>
+    <input type="number" class="form-control" id="totalAmount" name="totalAmount" [(ngModel)]="newDps.totalAmount" required>
+  </div>
+  <div class="form-group">
+    <label for="totalAllAmount">You Get Total</label>
+    <input type="number" class="form-control" id="totalAllAmount" name="totalAllAmount" [(ngModel)]="newDps.totalAllAmount" required>
+  </div>
+  <div class="form-group">
+    <label for="dpsPaid">You Get Total</label>
+    <input type="number" class="form-control" id="dpsPaid" name="dpsPaid" [(ngModel)]="newDps.dpsPaid" required>
+  </div>
+  
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

@@ -1,0 +1,24 @@
+<!-- dps-about.component.html -->
+<div *ngIf="dpsList">
+    <h2>DPS About List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Term</th>
+          <th>Interest Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dps of dpsList">
+          <td>{{dps.dpsid}}</td>
+          <td>{{dps.dpsName}}</td>
+          <td>{{dps.dpsAmount}}</td>
+          <td>{{dps.dpsTerm}}</td>
+          <td>{{dps.interestRate}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,73 @@
+<!-- customer-list.component.html -->
+<app-footer></app-footer>
+
+
+
+<div class="container-fluid page-body-wrapper">
+
+  <app-sidebar2></app-sidebar2>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="container my-custom-container">
+        <!-- <div class="col-md-12 grid-margin stretch-card">
+          <div class="card"> -->
+            <div class="card-body">
+
+              <h3 class="card-title text-center mt-2">Customer List</h3>
+
+              <p class="card-description"> Unique Bank Limited </p>
+              <table class="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th>Account Number</th>
+                    <th>Account Name</th>
+                    <th>Account Type</th>
+                    <th>Email</th>
+                    <!-- <th>Gender</th> -->
+                    <th>Address</th>
+                    <th>Current Balance</th>
+                    <!-- <th>Creating Date</th> -->
+                    <th>Status</th>
+                    <th>Action</th>
+                    <th>Update Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let customer of customers">
+                    <td>{{ customer.accountNumber }}</td>
+                    <td>{{ customer.firstName }} {{ customer.lastName }}</td>
+                    <td>{{ customer.accountType }}</td>
+                    <td>{{ customer.email }}</td>
+                    <!-- <td>{{ customer.gender }}</td> -->
+                    <td>{{ customer.address }}</td>
+                    <td>{{ customer.currentBalence }}</td>
+                    <!-- <td>{{ customer.creatingDate | date }}</td> -->
+                    <td>{{ customer.status ? 'Active' : 'Inactive' }}</td>
+                    <td>
+                      <button class="btn btn-primary" (click)="updateStatus(customer?.aid)">Update Status</button>
+                    </td>
+                    <td>
+                      <img [src]="customer.image" alt="Customer Image" style="width: 100px; height: 100px;">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            <!-- </div>
+          </div> -->
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+</div>
+

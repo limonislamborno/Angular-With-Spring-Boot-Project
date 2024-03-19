@@ -1,0 +1,9 @@
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  

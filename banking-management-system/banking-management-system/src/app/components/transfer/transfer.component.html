@@ -1,0 +1,78 @@
+<app-footer></app-footer>
+<div class="container-fluid page-body-wrapper">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="container my-custom-container">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center mt-2">Transfer Form</h3>
+              <div class="alert alert-success mt-3 text-center" *ngIf="showSuccessMessage">
+                Balence Transfer Successfully
+              </div>
+              <form (ngSubmit)="submitTransferForm()" #transferForm="ngForm">
+                <div class="form-group">
+                  <label for="fromAccountNumber">From Account Number:</label>
+                  <input type="text" id="fromAccountNumber" name="fromAccountNumber"
+                    [(ngModel)]="transferData.fromAccountNumber" class="form-control" required
+                    (keyup)="fetchUserDetails('from')">
+                  <div class="alert alert-danger mt-2" *ngIf="showAccountNotFoundMessage">
+                    Account not found!
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="fromFirstName">From Account Name:</label>
+                  <input type="text" id="fromFirstName" name="fromFirstName" [(ngModel)]="transferData.fromFirstName"
+                    class="form-control" readonly>
+                </div>
+
+                <div class="form-group">
+                  <label for="toAccountNumber">To Account Number:</label>
+                  <input type="text" id="toAccountNumber" name="toAccountNumber"
+                    [(ngModel)]="transferData.toAccountNumber" class="form-control" required
+                    (keyup)="fetchUserDetails('to')">
+                  <div class="alert alert-danger mt-2" *ngIf="showToAccountNotFoundMessage">
+                    Account not found!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="toFirstName">To Account Name:</label>
+                  <input type="text" id="toFirstName" name="toFirstName" [(ngModel)]="transferData.toFirstName"
+                    class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="transferAmount">Transfer Amount:</label>
+                  <input type="number" id="transferAmount" name="transferAmount"
+                    [(ngModel)]="transferData.transferAmount" class="form-control" required>
+                </div>
+                <div class="alert alert-danger mt-2" *ngIf="showInsufficientBalanceMessage">
+                  Transfer Amount Will Be 500 or More!
+                </div>
+                <!-- <button type="submit" class="btn btn-primary text-center mt-5">Submit Transfer</button> -->
+                <div class="text-center mt-5">
+                  <button type="submit" class="btn btn-primary ">Submit
+                    Transfer</button>
+                  <span style="margin-left: 10px;"></span>
+
+
+                  <button type="button" class="btn btn-gradient-danger" (click)="printLastTransferReceipt()">Print Last Receipt</button>
+                </div>
+
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>

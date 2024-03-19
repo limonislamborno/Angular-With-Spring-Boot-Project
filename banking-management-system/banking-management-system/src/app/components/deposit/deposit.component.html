@@ -1,0 +1,57 @@
+<app-footer></app-footer>
+<div class="container-fluid page-body-wrapper">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="container my-custom-container">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center mt-2">Deposit Form</h3>
+              <div class="alert alert-success mt-3 text-center" *ngIf="showSuccessMessage">
+                Deposit Successfully
+              </div>
+              <div id="alertMessage1" class="alert" style="display: none;"></div>
+              <div id="alertMessage" class="alert alert-danger" *ngIf="error">
+                <p>{{ error }}</p>
+              </div>
+              <form (ngSubmit)="submitDepositForm()" class="needs-validation" novalidate>
+                <div class="form-group">
+                  <label for="accountNumber">Account Number:</label>
+                  <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber"
+                    class="form-control" (change)="checkAccountNumber()" (keyup)="checkAccountNumber()" required>
+                  <div class="alert alert-danger mt-2" *ngIf="showAccountNotFoundMessage">
+                    Account not found or status is not active!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="firstName">Account Name:</label>
+                  <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="accountType">Account Type:</label>
+                  <input type="text" id="accountType" name="accountType" [(ngModel)]="accountType" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="dAmount">Deposit Amount:</label>
+                  <input type="text" id="dAmount" name="dAmount" [(ngModel)]="dAmount" class="form-control" required>
+                </div>
+                <div class="text-center mt-5">
+                  <button type="submit" class="btn btn-primary">Submit Deposit</button>
+                  <span style="margin-left: 10px;"></span>
+                  <button type="button" class="btn btn-gradient-danger" (click)="printLastDepositReceipt()">Print Last Receipt</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>

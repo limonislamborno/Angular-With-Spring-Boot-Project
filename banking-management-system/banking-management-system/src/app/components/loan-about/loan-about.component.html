@@ -1,0 +1,43 @@
+<!-- loan-about.component.html -->
+
+<app-footer></app-footer>
+<div class="container-fluid page-body-wrapper">
+  <app-sidebar2></app-sidebar2>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="container my-custom-container">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+<div class="container">
+    <h2>Loan About</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Loan Type</th>
+          <th>Loan Amount</th>
+          <th>Loan Term</th>
+          <th>Interest Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loanAbout of loanAboutList">
+          <td>{{ loanAbout.id }}</td>
+          <td>{{ loanAbout.loanType }}</td>
+          <td>{{ loanAbout.loanAmount }}</td>
+          <td>{{ loanAbout.loanTerm }}</td>
+          <td>{{ loanAbout.interestRate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+

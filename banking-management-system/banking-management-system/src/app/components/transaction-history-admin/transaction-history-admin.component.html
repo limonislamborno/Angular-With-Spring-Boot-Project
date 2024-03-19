@@ -1,0 +1,103 @@
+<app-footer></app-footer>
+
+
+
+<div class="container-fluid page-body-wrapper">
+
+  <app-sidebar2></app-sidebar2>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+
+
+
+
+      <div class="container my-custom-container">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+
+              <h3 class="card-title text-center mt-2">Register Form</h3>
+
+                Register Successfully
+              </div>
+              <p class="card-description"> Unique Bank Limited </p>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Start Date: <input type="date" [(ngModel)]="startDate"></label>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>End Date: <input type="date" [(ngModel)]="endDate"></label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 mb-3">
+        <label>
+          <input type="radio" name="transactionType" value="deposit" [(ngModel)]="transactionType"> Deposit
+        </label>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label>
+          <input type="radio" name="transactionType" value="withdraw" [(ngModel)]="transactionType"> Withdraw
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group text-center">
+      <button type="button" class="btn btn-primary" (click)="fetchTransactions()">Fetch Transactions</button>
+    </div>
+
+    <table *ngIf="transactions.length > 0" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Account Name</th>
+          <th>Account Number</th>
+          <th>Account Type</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let transaction of transactions">
+          <tr *ngIf="transactionType === 'deposit'">
+            <td>{{ transaction.firstName }}</td>
+            <td>{{ transaction.accountNumber }}</td>
+            <td>{{ transaction.accountType }}</td>
+            <td>{{ transaction.dAmount }}</td> <!-- Displaying dAmount for deposit -->
+            <td>{{ transaction.depositTime }}</td> <!-- Displaying depositTime for deposit -->
+          </tr>
+          <tr *ngIf="transactionType === 'withdraw'">
+            <td>{{ transaction.firstName }}</td>
+            <td>{{ transaction.accountNumber }}</td>
+            <td>{{ transaction.accountType }}</td>
+            <td>{{ transaction.wAmount }}</td> <!-- Displaying wAmount for withdraw -->
+            <td>{{ transaction.withdrawTime }}</td> <!-- Displaying withdrawTime for withdraw -->
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,85 @@
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+      <li class="nav-item nav-profile">
+          <a href="#" class="nav-link">
+              <div class="nav-profile-image">
+                  <img src="assets/images/faces/face1.jpg" alt="profile">
+                  <span class="login-status online"></span>
+                  <!--change to offline or busy as needed-->
+              </div>
+              <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2">Limon Islam Borno</span>
+                  <span class="text-secondary text-small">Stuff</span>
+
+              </div>
+              <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/dashboard1">
+              <span class="menu-title">Dashboard</span>
+              <i class="mdi mdi-home menu-icon"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">Account</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+          </a>
+          <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="/addcustomer">Add Acoount</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/viewcustomer">View Account</a></li>
+              </ul>
+          </div>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="/transactionhistory2">
+              <span class="menu-title btn-icon-prepend">Statement</span>
+              <i class="mdi mdi-chart-bar menu-icon"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/search">
+              <span class="menu-title">Search here</span>
+              <i class="mdi mdi-table-large menu-icon"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#transaction-pages" aria-expanded="false" aria-controls="transaction-pages">
+              <span class="menu-title">Transaction</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-medical-bag menu-icon"></i>
+          </a>
+          <div class="collapse" id="transaction-pages">
+              <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="/deposit"> Deposit </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/withdraw"> Withdraw </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/transfer"> Transfer </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/transactionhistory"> Transaction History </a></li>
+
+              </ul>
+          </div>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#loan-management-pages" aria-expanded="false" aria-controls="loan-management-pages">
+              <span class="menu-title">Loan Management</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-medical-bag menu-icon"></i>
+          </a>
+          <div class="collapse" id="loan-management-pages">
+              <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="/loanapply">Apply Loan </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/loancheck"> Loan Approval Check </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/loanpaymentform"> Loan Pay </a></li>
+
+              </ul>
+          </div>
+      </li>
+
+
+  </ul>
+</nav>
